@@ -154,6 +154,17 @@ nav a {
     }
 }
 
+/*Style der Unterseite*/
+.hero {
+    width: 100%;
+    height: auto;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
 
 .package {
     flex: 1 1 calc(33.33% - 20px); /* Drei Boxen nebeneinander */
