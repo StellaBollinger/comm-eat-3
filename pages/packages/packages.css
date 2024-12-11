@@ -206,7 +206,7 @@ color: var(--SBB-red);
 } */
 
 
-
+/*
 :root {
     --primary: #0DA09D;
     --primary-hover: #097674;
@@ -421,5 +421,279 @@ footer {
 
     nav a {
         font-size: 14px;
+    }
+}
+*/
+
+:root {
+    --primary: #0DA09D;
+    --primary-hover: #097674;
+    --SBB-red: #eb0000;
+    --UI-light: #d9d9d9;
+    --UI-dark: #b9b9b9;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header img {
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.1); /* Vergrößerung beim Hover */
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+nav li {
+    padding: 10px 40px;
+    border-radius: 20px;
+    background-color: var(--primary-hover);
+    transition: all 0.3s ease;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+nav li:hover {
+    background-color: var(--SBB-red);
+    transform: translateY(-3px); /* Hebt das Element leicht an */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+    text-align: center;
+    background-color: var(--UI-light);
+    padding: 50px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.packages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+}
+
+.package {
+    flex: 1 1 calc(33.33% - 20px);
+    padding: 20px;
+    background-color: var(--UI-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package:hover {
+    transform: scale(1.05); /* Vergrößert die Box leicht beim Hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.package h2 {
+    color: var(--primary-hover);
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.package h2:hover {
+    color: var(--SBB-red); /* Farbe wechselt beim Hover */
+}
+
+.package ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.package ul li {
+    margin: 10px 0;
+}
+
+.package img {
+    height: 150px;
+    width: auto;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.package img:hover {
+    transform: rotate(5deg); /* Bild rotiert leicht beim Hover */
+}
+
+.cta {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cta .button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta .button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-5px); /* Button hebt sich an */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: var(--UI-light);
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.footer-content div {
+    flex: 1 1 200px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1); /* Vergrößerung */
+    filter: brightness(1.2); /* Aufhellung beim Hover */
+}
+
+.footer-social a:nth-child(2) img {
+    width: 25px; /* Verkleinerte Breite nur für Instagram */
+    height: 25px; /* Verkleinerte Höhe nur für Instagram */
+}
+
+/* Media Queries für verschiedene Bildschirmgrößen */
+
+/* Tablet: Bildschirmbreiten zwischen 768px und 1024px */
+@media (max-width: 1024px) {
+    .packages {
+        gap: 10px;
+    }
+
+    .package {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav li {
+        padding: 5px 20px;
+    }
+}
+
+/* Smartphone: Bildschirmbreiten unter 768px */
+@media (max-width: 768px) {
+    .packages {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .package {
+        flex: 1 1 100%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .cta .button {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Kleine Smartphones: Bildschirmbreiten unter 480px */
+@media (max-width: 480px) {
+    .package img {
+        height: 100px;
+    }
+
+    .cta .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .footer-social img {
+        width: 20px;
+        height: 20px;
     }
 }
