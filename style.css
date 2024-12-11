@@ -53,12 +53,12 @@ ul{
 
 
 a{
-    color: black;
+    color: var(--primary);
     text-decoration: none;
 }
 
 a:hover{
-    color: var(--primary)
+    color: var(--primary_hover)
 }
 
 
@@ -307,7 +307,29 @@ footer {
     padding: 0% 0% 0% 2%;
 }
 
-<<<<<<< Updated upstream
+/*Footer iPad*/
+@media(min-width:768px){
+    
+    .footer-content{
+        height: 150px;
+        flex-direction: row;
+        padding: 2% 2% 0% 2%;
+    }
+
+    .footerspalte{
+       width: 30%;
+    }
+
+    .footerspalte h3{
+        display: none;
+    }
+
+    .footer-bottom {
+        padding: 0% 0% 0% 2%;
+        height: 350px;
+    }
+}
+
 /*Footer Desktop*/
 @media(min-width:1080px){
     .footer-content{
@@ -323,13 +345,12 @@ footer {
         display: block;
     }
 
-    .footerspalte .social-icons {
-        display: flex;
-        gap: 10px;
+    .footer-bottom {
+        padding: 0% 0% 0% 2%;
+        height: 50px;
     }
 }
 
-=======
 /* Responsive Layout für iPad (768px bis 1080px) */
 @media (min-width: 768px){
     .testimonials {
@@ -369,13 +390,10 @@ footer {
         height:100%;
         object-fit: cover;
         border-radius: 0px 10px 10px 0px;
+    }
 }
 
-}
 
-
-
->>>>>>> Stashed changes
 /*Responsive für desktop - grösser als 768px überschreibt der untenstehende code den obigen Style*/
 @media(min-width:1080px){
     /*Header Bild*/
@@ -460,6 +478,5 @@ footer {
         width: 25%;
         height: 500px;
     }
-<<<<<<< Updated upstream
- 
+
  }
