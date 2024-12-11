@@ -163,12 +163,20 @@ main{
 }
 
 .left {
-    background-color: #bed8d7;
-    margin: 0px;
-    padding: 0px;
-    height: 150px;
-    border-radius: 0px;
-}
+    border-radius: 10px 0px 0px 10px;
+    height: auto;
+    width: 100%;
+    height:20%;
+    display:block;
+    }
+
+    .left img{
+        width:100%;
+        height: 220px;
+
+        object-fit: cover;
+    }
+
 
 form{
     display: flex; /*Übergeordnetes Element*/
@@ -197,6 +205,15 @@ form{
     border-radius: 10px 0px 0px 10px;
     height: auto;
     width: 50%;
+    display:block;
+    width: 50%;
+    }
+
+    .left img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        border-radius: 10px 0px 0px 10px;
     }
 
     form{
