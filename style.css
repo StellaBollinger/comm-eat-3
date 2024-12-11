@@ -46,6 +46,12 @@ p{
     color: black;
 }
 
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+
 a{
     color: black;
     text-decoration: none;
@@ -117,7 +123,6 @@ nav li {
 }
 
 nav .active li {
-    font-weight: bold;
     color: var(--primary);
     text-decoration: underline;
     text-decoration-color:var(--primary);
@@ -132,6 +137,8 @@ nav a {
 
 /*Style Navigation Desktop*/
 @media(min-width:768px){
+    
+
     nav{
     display: flex;
     flex-direction: row;
@@ -150,7 +157,7 @@ nav a {
 /*Header Bild*/
 .hero {
     width: 100%;
-    height: 200px;
+    height: auto;
 }
 
 .hero img{
@@ -171,8 +178,7 @@ nav a {
 }
 
 .get-started-img {
-    visibility: hidden;
-    height: 0px;
+    display: none;
 }
 
 /*get started section Style Liste*/
@@ -208,7 +214,8 @@ nav a {
 .about {
     display: flex;                   /* Flexbox für horizontale Anordnung */
     flex-direction: column-reverse;
-    margin-top: 5%;              
+    margin-top: 5%;
+    margin-bottom: 5%;              
 }
 
 .about-text {
@@ -228,7 +235,6 @@ nav a {
     max-width: 100%;                 /* Bild passt sich an den verfügbaren Platz an */
     height: auto;                    /* Bewahrt das Seitenverhältnis */
     border-radius: 10px;             /* Abgerundete Ecken */
-    
 }
 
 .testimonials {
@@ -265,7 +271,7 @@ footer {
     justify-content: center; /*Untergeordnete Elemente (div und form) in Horinzontale Linie in der Mitte anorden*/
     width: 100%;
     margin-top: 5%;
-    color: white;
+    padding-bottom: 1%;
     border-style: solid;
     border-color: var(--UI);
     border-width: 1px 0px 0px 0px;
@@ -273,30 +279,27 @@ footer {
 
 .footer-content {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 2%;
-    padding: 2%;
+    padding: 2% 2% 0% 2%;
 }
 
-.footer-contact ul {
-    list-style: none;
-    padding: 0;
+.footerspalte {
+    width: 20%;
 }
 
-.footer-contact li {
-    font-size: 16px;
+.footerspalte img {
+    height: 20px;
 }
 
-.footer-social .social-icons {
+
+.footerspalte .social-icons {
     display: flex;
     gap: 10px;
 }
 
-
 .footer-bottom {
-    border-top: 1px solid var(--UI-dark);
-    height: 20px;
-    text-align: center;
+    padding: 0% 0% 0% 2%;
 }
 
 /*Responsive für desktop - grösser als 768px überschreibt der untenstehende code den obigen Style*/
@@ -329,7 +332,7 @@ footer {
          padding: 5%;
      }
      .get-started-img {
-         visibility: visible;
+         display:block;
          width: 50%;
          height: 500px;
      }
@@ -374,6 +377,7 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin-top: 1%;
         gap: 20px;
         height: 500px;
     }
