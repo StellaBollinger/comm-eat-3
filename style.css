@@ -53,12 +53,12 @@ ul{
 
 
 a{
-    color: black;
+    color: var(--primary);
     text-decoration: none;
 }
 
 a:hover{
-    color: var(--primary)
+    color: var(--primary_hover)
 }
 
 
@@ -322,9 +322,9 @@ footer {
         display: block;
     }
 
-    .footerspalte .social-icons {
-        display: flex;
-        gap: 10px;
+    .footer-bottom {
+        padding: 0% 0% 0% 2%;
+        height: 50px;
     }
 }
 
@@ -367,11 +367,8 @@ footer {
         height:100%;
         object-fit: cover;
         border-radius: 0px 10px 10px 0px;
+    }
 }
-
-}
-
-
 
 /*Responsive für desktop - grösser als 768px überschreibt der untenstehende code den obigen Style*/
 @media(min-width:1080px){
