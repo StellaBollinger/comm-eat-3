@@ -713,22 +713,23 @@ footer {
     }
 }
 
-/* Sehr kleine Smartphones (unter 480px) */
+/* Kleine Smartphones: Bildschirmbreiten unter 480px */
 @media (max-width: 480px) {
-    .package {
-        min-height: 300px; /* Kleinere Mindesthöhe */
+    .package img {
+        height: 100px;
     }
 
-    .package_image {
-        height: 120px; /* Kleinere Höhe für Logos */
-    }
-
-    header img {
-        height: 30px; /* Kleineres Logo für kleine Bildschirme */
-        margin-bottom: 30px; /* Noch mehr Abstand für kleine Bildschirme */
+    .cta .button {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 
     nav a {
         font-size: 14px;
+    }
+
+    .footer-social img {
+        width: 20px;
+        height: 20px;
     }
 }

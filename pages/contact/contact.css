@@ -19,8 +19,52 @@ h1{
     margin: 0px;
 }
 
+h2{
+    font-weight: 800;
+    font-size: 1.5em;
+    text-align: left;
+    color:black;
+}
+
+h3{
+    font-weight: 800;
+    font-size: 1.3em;
+    text-align: left;
+    color:black;
+}
+
+h4{
+    text-align: left;
+    color: black;
+}
+
+p{
+    font-weight: 200;
+    font-size: 1em;
+    line-height: 1.4;
+    text-align: left;
+    color: black;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+
+a{
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--primary_hover)
+}
+
+
 button{
-    font-weight: 100;
+    width: 40%;
+    font-weight: 200;
     border-radius: 40px;
     border:0px;
     padding:20px;
@@ -33,6 +77,10 @@ button{
 button:hover {
     background-color: var(--primary_hover);
 }
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 
 /*Style Navigation Mobile*/
 nav{
@@ -55,7 +103,7 @@ nav ul {
     padding: 0px;
 }
 
-img{
+.logo img{
     height: 20px;
 }
 
@@ -77,8 +125,11 @@ nav a {
     font-size: 1em;
 }
 
+
 /*Style Navigation Desktop*/
 @media(min-width:768px){
+    
+    /*Navigation*/
     nav{
     display: flex;
     flex-direction: row;
@@ -92,6 +143,8 @@ nav a {
         gap: 20px;
     }
 }
+
+
 
 /*Style Kontakt Seite - Aufbau flexbox Elemente*/
 body { 
@@ -182,46 +235,91 @@ form textarea {
 
 
 /*Style footer*/
-footer{
+/*Footer Mobile*/
+footer {
+    display: flex;            /*Übergeordnetes Element*/
+    flex-direction: column;
+    justify-content: center; /*Untergeordnete Elemente (div und form) in Horinzontale Linie in der Mitte anorden*/
+    width: 100%;
+    margin-top: 5%;
+    padding-bottom: 1%;
     border-style: solid;
     border-color: var(--UI);
     border-width: 1px 0px 0px 0px;
-    padding: 2%;
 }
 
-
-/*Style Footer*/
-
-.spalten{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.spalte {
-    width: 20%;
-}
-
-.spalte2 {
-    width: 40%;
-}
-.spalte2 ul {
-    margin: 0;
-    padding:0;
-}
-
-.spalte2 ul a{
-    text-decoration: none;
-    list-style: none;
-}
-
-.spalte3 {
+.footer-content {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    justify-content: space-between;
+    padding: 5% 2% 0% 2%;
 }
 
-.spalte3 a{
-    text-decoration: none;
-    color: #000000;
+.footerspalte {
+    width: 100%;
 }
+
+.footerspalte h3{
+    display: none;
+}
+
+.footerspalte img {
+    height: 20px;
+}
+
+.footerspalte .social-icons {
+    display: flex;
+    gap: 10px;
+    padding: 2% 0%;
+}
+
+.footer-bottom {
+    padding: 0% 0% 0% 2%;
+}
+
+/*Footer iPad*/
+@media(min-width:768px){
+    
+    .footer-content{
+        height: 150px;
+        flex-direction: row;
+        padding: 2% 2% 0% 2%;
+    }
+
+    .footerspalte{
+       width: 30%;
+    }
+
+    .footerspalte h3{
+        display: none;
+    }
+
+    .footer-bottom {
+        padding: 0% 0% 0% 2%;
+        height: 350px;
+    }
+}
+
+/*Footer Desktop*/
+@media(min-width:1080px){
+    .footer-content{
+        flex-direction: row;
+        padding: 2% 2% 0% 2%;
+    }
+
+    .footerspalte{
+       width: 20%;
+    }
+
+    .footerspalte h3{
+        display: block;
+    }
+
+    .footer-bottom {
+        padding: 0% 0% 0% 2%;
+        height: 50px;
+    }
+}
+
+
+
