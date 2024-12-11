@@ -1,92 +1,163 @@
+/*Style Allgemein*/
 :root {
+  /* Farben */
   --primary: #0DA09D;
-  --primary-hover: #097674;
-  --SBB-red: #eb0000;
-  --SBB-red-hover: #b40000;
-  --UI-light: #d9d9d9;
-  --UI-dark: #b9b9b9;
+  --primary_hover: #097674;
+  --SBB_red: #eb0000;
+  --SBB_red_hover: #b40000;
+  --UI: #d9d9d9;
+  --UI_dark: #b9b9b9;
+
+  --primary-alpha-20: rgba(13, 160, 157, .2);
 }
 
-* {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
+*{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+  margin: 0px;
+}
+
+h2{
+  font-weight: 800;
+  font-size: 1.5em;
+  text-align: left;
+  color:black;
+}
+
+h3{
+  font-weight: 800;
+  font-size: 1.3em;
+  text-align: left;
+  color:black;
+}
+
+h4{
+  text-align: left;
+  color: black;
+}
+
+p{
+  font-weight: 200;
+  font-size: 1em;
+  line-height: 1.4;
+  text-align: left;
+  color: black;
+}
+
+ul{
+  list-style: none;
   padding: 0;
 }
-/* border box bedeutet, dass der Browser zum Content der Box den Border automatisch dazu rechent
-und man nicht manuell alles adjusten muss.  */
+
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+  color: var(--primary)
+}
+
+
+button{
+  width: 40%;
+  font-weight: 200;
+  border-radius: 40px;
+  border:0px;
+  padding:20px;
+  margin-top:30px;
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.10),0 5px 5px 0 rgba(0, 0, 0, 0.11);
+}
+
+button:hover {
+  background-color: var(--primary_hover);
+}
+
+main{
+  display: flex; /*Übergeordnetes Element*/
+  flex-direction: column;
+  justify-content: center; /*Untergeordnete Elemente (div und form) in Horinzontale Linie in der Mitte anorden*/
+  width: 90%;
+  align-self: center;
+}
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-}
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    /* position: relative; */
-  }
-
-  nav ul {
-    flex-direction: column; /* Menü vertikal ausrichten */
-    gap: 10px;
-    margin: 20px; 
-  }
-
-  nav li {
-    padding: 10px 20px;
-  }
+  margin:0px;
+  padding: 0px;
 }
 
-
-header {
-  background-color: var(--primary);
-  color: white;
+/*Style Navigation Mobile*/
+nav{
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 40px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  justify-content: space-between;
+  height: 82px;
+  border-style: solid;
+  border-color: var(--UI);
+  border-width: 0px 0px 1px 0px;
+  box-shadow: 0 10px 10px 0 rgba(181, 181, 181, 0.038),0 4px 4px 0 rgba(189, 189, 189, 0.11);
 }
 
-header img {
-  height: 40px;
-  filter: invert(1);
-}
-
-/* Start Navigation styling */
 nav ul {
   display: flex;
-  gap: 15px;
+  flex-direction: row;
+  justify-content: space-between;
   list-style: none;
+  padding: 0px;
+}
+
+.logo img{
+  height: 20px;
 }
 
 nav li {
-  padding: 10px 40px;
-  border-radius: 20px;
-  background-color: var(--primary-hover);
-  transition: all 0.2s ease;
-  
+  padding: 10px 10px;
+  color: black;
+}
+
+nav .active li {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-color:var(--primary);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 16px;
 }
 
 nav a {
   text-decoration: none;
-  color: white;
-  font-size: 16px;
+  font-size: 1em;
 }
 
-nav li:hover {
-  background-color: var(--SBB-red);
+/*Style Navigation Desktop*/
+@media(min-width:768px){
+  
+  /*Navigation*/
+  nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0% 2% 0% 2%;
+  }
+
+  nav ul{
+      gap: 20px;
+  }
 }
-/* End Navigation styling */
 
 /* Start Main Styling */
 
 .about_overview{
-  background-color: var(--UI-light);
+  background-color: var();
   padding-top: 1rem;
 }
 
@@ -94,8 +165,10 @@ nav li:hover {
   display: flex;
   flex-wrap: wrap; /* Boxen umbrechen, wenn der Platz nicht ausreicht */
   gap: 20px; /* Abstand zwischen den Boxen */
-  justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
+  justify-content: center; /* Gleichmäßige Verteilung der Boxen */
   padding: 20px;
+  width: 100%;
+  height: 60%;
 }
 
 
@@ -113,17 +186,16 @@ nav li:hover {
   align-items: center; /* Zentriere Inhalte horizontal */
   justify-content: center; /* Zentriere Inhalte vertikal */
   text-align: center; /* Textausrichtung */
-  background-color: var(--primary);
+  background-color: #bed8d7;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(25% - 20px); /* Flexbox sorgt für vier gleich große Boxen */
+  flex: 1 1 1 calc(25% - 20px); /* Flexbox sorgt für vier gleich große Boxen */
   max-width: calc(25% - 20px); /* Maximalbreite der Box */
-  height: 250px; /* Einheitliche Höhe */
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .Wert {
     flex: 1 1 100%; /* Eine Box nimmt die volle Breite ein */
     max-width: 100%; /* Entferne die Maximalbreite */
@@ -132,15 +204,13 @@ nav li:hover {
     margin-bottom: 20px; /* Abstand zwischen den Boxen */
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .Wert-container {
     flex-direction: column; /* Boxen übereinander anordnen */
     align-items: center;
     justify-content: center;
   }
 }
-
-
 
 .Wert h3 {
   margin-bottom: 10 px; /* Abstand zwischen Text und Bild */
@@ -162,11 +232,6 @@ nav li:hover {
   transform: scale(1.1); /* Vergrößerung bei Hover */
 }
 
-
-.Unsere_Werte .Wert{ 
-  flex: 1 1 calc(25% -20px);
-}
-
 .Unsere_Werte{
   padding: 5rem; 
 }
@@ -181,10 +246,9 @@ nav li:hover {
 
 .Schwestern {
   display: flex;
-  align-items: flex-start; 
- justify-content: space-around;
   gap: 20px; /* Abstand zwischen Bild und Text */
-  padding: 20px;
+  flex-wrap: nowrap;
+  align-items: flex-start; /* Bild und Text vertikal ausrichten */
 }
 
 
@@ -203,43 +267,36 @@ nav li:hover {
   overflow: hidden; /* Bild innerhalb des Containers bleibt begrenzt */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatteneffekt */
   flex-shrink: 0; /* Verhindert, dass das Bild zu klein wird */
-  justify-content: stretch;
 }
 
 .Schwestern_img img {
   width: 680px; /* Festgelegte Breite des Bildes */
-  height: 300px; /* Festgelegte Höhe des Bildes */
+  height: auto; /* Festgelegte Höhe des Bildes */
   object-fit: cover; /* Verhindert Verzerrung und schneidet das Bild passend zu */
-}
-
-.Text {
-  flex: 1; /* Nimmt den restlichen verfügbaren Platz ein */
-}
+} 
 
 .Text p {
   font-size: 16px; /* Schriftgröße */
   line-height: 1.63; /* Zeilenhöhe für bessere Lesbarkeit */
   color: #333; /* Textfarbe */
-  margin: 0; /* Entfernt Standardabstand des Paragraphen */
   background-color: var(--UI-light);
   border-radius: 20px;
   text-align: justify;
   padding: 2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .Schwestern {
     flex-direction: column; /* Elemente vertikal anordnen */
-    align-items: center;
+    flex-wrap: wrap; /* Elemente umbrechen, wenn der Platz nicht ausreicht */
+    align-items: center; /* Zentriere Inhalte */
+    flex: 1 100%; /* Volle Breite */
   }
 
   .Schwestern_img img {
     width: 100%; /* Bild passt sich der Breite an */
     height: auto; /* Automatische Höhe */
-  }
-
-  .Text {
-    padding: 20px;
+    flex-wrap: wrap;
   }
 }
 
@@ -248,28 +305,9 @@ nav li:hover {
 
 /* Start Team Styling */
 
-@media (max-width: 768px) {
-  .Team_Container .Team {
-    flex-direction: column; /* Stapelt Bild und Text vertikal */
-    align-items: flex-start; /* Linksbündige Ausrichtung */
-    flex: 1 100%; 
-    max-width: 100%;
-    height: auto; 
-  }
-}
 
-@media (max-width: 768px) {
-  .Teammember {
-    flex: 1 1 100%; /* Box nimmt die gesamte Breite ein */
-    max-width: 100%;
-    margin-bottom: 20px; /* Abstand zwischen den Boxen */
-  }
 
-  .Teammember img {
-    width: 150px; /* Kleinere Bilder */
-    height: auto;
-  }
-}
+
 .Team h2{
   text-align: center;
   margin-bottom: 40px; /* Abstand zur Containerbox */
@@ -278,7 +316,7 @@ nav li:hover {
   margin-top: 40px;
 }
 
-.Team_Container{
+.Team_Container {
   display: flex;
   flex-wrap: wrap; /* Boxen umbrechen, wenn der Platz nicht ausreicht */
   gap: 20px; /* Abstand zwischen den Boxen */
@@ -288,36 +326,39 @@ nav li:hover {
 
 .Teammember {
   display: flex;
-  flex-direction: column; /* Text und Bild vertikal anordnen */
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly; /* Zentriere Inhalte vertikal */
-  text-align: center; /* Textausrichtung */
+  position: relative;
+  flex-direction: row; /* Bild links, Text rechts */
+  align-items: center; /* Vertikale Zentrierung */
+  justify-content: space-evenly; /* Inhalte von links nach rechts */
   background-color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(33.33% - 20px); /* 3 Elemente pro Zeile */
-  max-width: calc(33.33% - 20px); /* Maximalbreite auf ein Drittel setzen */
-  height: 250px; /* Einheitliche Höhe bleibt erhalten */
-  position: relative; /* Ermöglicht das Positionieren von Kind-Elementen relativ zur Box */
-  overflow: hidden; /* Verhindert, dass der Inhalt außerhalb der Box sichtbar wird */
+  width: 100%; /* Volle Breite im Container */
+  max-width: 1200px; /* Begrenze Breite für größere Bildschirme */
 }
 
-.Teammember p{
+.Teammember .text {
+  display: flex;
+  flex-direction: column; /* Text untereinander */
+}
+
+.Teammember .text p {
   font-style: italic;
-  font-family: 'Courier New', Courier, monospace; 
-  gap: 5px;
   font-size: 14px;
+  margin: 5px 0 0;
+  color: #666; /* Etwas hellere Schriftfarbe */
 }
 
-.Teammember img{
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-  border-radius: 20px;
+
+.Teammember img {
+  width: 280px; /* Bild passt sich der Breite der Box an */
+  max-width: 150px; /* Begrenze die maximale Breite für größere Displays */
+  height: 200px; /* Dynamische Höhe */
+  object-fit: cover; /* Behalte das Seitenverhältnis */
+  border-radius: 10px; /* Abrundung beibehalten */
 }
+
 
 .Team .Teammember {
   flex: 1 1 calc(33.33% - 20px); /* Gleiche Anpassung wie oben */
@@ -327,9 +368,9 @@ nav li:hover {
   content: attr(data-email); /* E-Mail-Adresse wird aus dem `data-email`-Attribut gezogen */
   position: absolute;
   bottom: 5%;
-  left: 65%;
+  left: 70%;
   transform: translateX(-50%) translateY(100%); /* Start außerhalb der Sicht */
-  background-color: var(--primary-hover); /* Hintergrundfarbe der E-Mail */
+  background-color: var(--primary_hover); /* Hintergrundfarbe der E-Mail */
   color: white; /* Textfarbe */
   padding: 10px;
   border-radius: 10px;
@@ -343,6 +384,25 @@ nav li:hover {
   opacity: 1; /* E-Mail erscheint */
 }
 
+@media (max-width: 768px) {
+  .Team_Container {
+    flex-direction: column; /* Boxen vertikal anordnen */
+    align-items: center; /* Zentriere Inhalte */
+  }
+
+  .Teammember {
+    flex: 1 1 100%; /* Volle Breite */
+    max-width: 90%; /* Begrenze die maximale Breite */
+    margin-bottom: 20px; /* Abstand zwischen den Boxen */
+    height: auto; /* Höhe basierend auf dem Inhalt */
+  }
+
+  .Teammember img {
+    width: 100%; /* Bild passt sich an */
+    max-width: 150px; /* Begrenze maximale Breite */
+    height: auto;
+  }
+}
 /* Ende Team Styling */
 
 /* Start Organigramm Styling */
@@ -403,95 +463,65 @@ nav li:hover {
 
 /* Ende Organigramm Styling */
 
-
-/* Start Footer Styling */
+/*Footer Mobile*/
 footer {
-  background-color: var(--UI-light);
-  color: white;
-  padding: 40px 20px;
-  text-align: left;
-
+  display: flex;            /*Übergeordnetes Element*/
+  flex-direction: column;
+  justify-content: center; /*Untergeordnete Elemente (div und form) in Horinzontale Linie in der Mitte anorden*/
+  width: 100%;
+  margin-top: 5%;
+  padding-bottom: 1%;
+  border-style: solid;
+  border-color: var(--UI);
+  border-width: 1px 0px 0px 0px;
 }
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap; /* Flexibles Layout für mobile Ansichten */
+  flex-direction: column;
   justify-content: space-between;
-  gap: 200px;
-  margin-bottom: 20px;
-  padding: 40px;
+  padding: 5% 2% 0% 2%;
 }
 
-.footer-content div {
-  flex: 1; /* Gleiche Breite der Spalten */
-  min-width: 200px;
-justify-content: left;
+.footerspalte {
+  width: 100%;
 }
 
-.footer-about h3,
-.footer-contact h3,
-.footer-social h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-
+.footerspalte h3{
+  display: none;
 }
 
-.footer-about p {
-  font-size: 16px;
-  line-height: 1.5;
+.footerspalte img {
+  height: 20px;
 }
 
-.footer-contact ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-contact li {
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.footer-contact a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s ease;
-
-}
-
-.footer-contact a:hover {
-  color: var(--SBB-red);
-}
-
-.footer-social .social-icons {
+.footerspalte .social-icons {
   display: flex;
   gap: 10px;
-
-}
-
-.footer-social img {
-  width: 30px;
-  height: 30px;
+  padding: 2% 0%;
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--UI-dark);
-  padding-top: 20px;
-  font-size: 14px;
-  color: var(--UI-dark);
-  text-align: center;
+  padding: 0% 0% 0% 2%;
 }
 
-@media (max-width: 600px) {
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+/*Footer Desktop*/
+@media(min-width:1080px){
+  .footer-content{
+      flex-direction: row;
+      padding: 2% 2% 0% 2%;
   }
 
-  .footer-about, .footer-contact, .footer-social {
-    margin-bottom: 20px; /* Abstand zwischen den Abschnitten */
+  .footerspalte{
+     width: 20%;
+  }
+
+  .footerspalte h3{
+      display: block;
+  }
+
+  .footerspalte .social-icons {
+      display: flex;
+      gap: 10px;
   }
 }
-
-/* Ende Footer Styling */
