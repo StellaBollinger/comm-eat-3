@@ -235,11 +235,14 @@ nav a {
     display: flex;
     flex-direction: column;
     margin-top: 0px;
-    height: 400px;
+    height: 50%;
 }
 
 .person {
     width: 90%;
+    align-self: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -257,34 +260,23 @@ nav a {
 
 
 footer {
-    background-color: var(--UI-light);
+    display: flex; /*Übergeordnetes Element*/
+    flex-direction: column;
+    justify-content: center; /*Untergeordnete Elemente (div und form) in Horinzontale Linie in der Mitte anorden*/
+    width: 100%;
+    margin-top: 5%;
     color: white;
-    padding: 40px 20px;
-    text-align: left;
     border-style: solid;
     border-color: var(--UI);
     border-width: 1px 0px 0px 0px;
-    padding: 2%;
-    margin-top: 5%;
-
 }
 
 .footer-content {
     display: flex;
-    flex-wrap: wrap; /* Flexibles Layout für mobile Ansichten */
     justify-content: space-between;
-    gap: 200px;
-    margin-bottom: 20px;
-    padding: 40px;
+    margin-bottom: 2%;
+    padding: 2%;
 }
-
-.footer-content div {
-    flex: 1; /* Gleiche Breite der Spalten */
-    min-width: 200px;
-justify-content: left;
-}
-
-
 
 .footer-contact ul {
     list-style: none;
@@ -292,27 +284,18 @@ justify-content: left;
 }
 
 .footer-contact li {
-    margin-bottom: 10px;
     font-size: 16px;
 }
-
 
 .footer-social .social-icons {
     display: flex;
     gap: 10px;
-
 }
 
-.footer-social img {
-    width: 30px;
-    height: 30px;
-}
 
 .footer-bottom {
     border-top: 1px solid var(--UI-dark);
-    padding-top: 20px;
-    font-size: 14px;
-    color: var(--UI-dark);
+    height: 20px;
     text-align: center;
 }
 
@@ -392,11 +375,14 @@ justify-content: left;
         flex-direction: row;
         justify-content: space-between;
         gap: 20px;
-        height: 400px;
+        height: 500px;
     }
 
     .person {
         width: 25%;
+        height: 500px;
     }
+
+
  
  }
