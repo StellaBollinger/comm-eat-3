@@ -307,29 +307,6 @@ footer {
     padding: 0% 0% 0% 2%;
 }
 
-/*Footer iPad*/
-@media(min-width:768px){
-    
-    .footer-content{
-        height: 150px;
-        flex-direction: row;
-        padding: 2% 2% 0% 2%;
-    }
-
-    .footerspalte{
-       width: 30%;
-    }
-
-    .footerspalte h3{
-        display: none;
-    }
-
-    .footer-bottom {
-        padding: 0% 0% 0% 2%;
-        height: 350px;
-    }
-}
-
 /*Footer Desktop*/
 @media(min-width:1080px){
     .footer-content{
@@ -392,7 +369,6 @@ footer {
         border-radius: 0px 10px 10px 0px;
     }
 }
-
 
 /*Responsive für desktop - grösser als 768px überschreibt der untenstehende code den obigen Style*/
 @media(min-width:1080px){
@@ -466,7 +442,6 @@ footer {
 
     .testimonials {
         display: flex;
-        flex-direction: row;
         flex-direction: row; 
         justify-content: space-between;
         margin-top: 1%;
@@ -478,5 +453,6 @@ footer {
         width: 25%;
         height: 500px;
     }
-
+ 
  }
+
