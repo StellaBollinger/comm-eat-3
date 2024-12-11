@@ -370,6 +370,8 @@ footer {
     }
 }
 
+
+
 /*Responsive für desktop - grösser als 768px überschreibt der untenstehende code den obigen Style*/
 @media(min-width:1080px){
     /*Header Bild*/
