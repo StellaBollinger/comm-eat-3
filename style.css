@@ -307,7 +307,6 @@ footer {
     padding: 0% 0% 0% 2%;
 }
 
-<<<<<<< Updated upstream
 /*Footer Desktop*/
 @media(min-width:1080px){
     .footer-content{
@@ -329,7 +328,6 @@ footer {
     }
 }
 
-=======
 /* Responsive Layout für iPad (768px bis 1080px) */
 @media (min-width: 768px){
     .testimonials {
@@ -375,7 +373,6 @@ footer {
 
 
 
->>>>>>> Stashed changes
 /*Responsive für desktop - grösser als 768px überschreibt der untenstehende code den obigen Style*/
 @media(min-width:1080px){
     /*Header Bild*/
@@ -448,7 +445,6 @@ footer {
 
     .testimonials {
         display: flex;
-        flex-direction: row;
         flex-direction: row; 
         justify-content: space-between;
         margin-top: 1%;
@@ -460,6 +456,6 @@ footer {
         width: 25%;
         height: 500px;
     }
-<<<<<<< Updated upstream
  
  }
+
