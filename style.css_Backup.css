@@ -53,12 +53,12 @@ ul{
 
 
 a{
-    color: var(--primary);
+    color: black;
     text-decoration: none;
 }
 
 a:hover{
-    color: var(--primary_hover)
+    color: var(--primary)
 }
 
 
@@ -307,29 +307,6 @@ footer {
     padding: 0% 0% 0% 2%;
 }
 
-/*Footer iPad*/
-@media(min-width:768px){
-    
-    .footer-content{
-        height: 150px;
-        flex-direction: row;
-        padding: 2% 2% 0% 2%;
-    }
-
-    .footerspalte{
-       width: 30%;
-    }
-
-    .footerspalte h3{
-        display: none;
-    }
-
-    .footer-bottom {
-        padding: 0% 0% 0% 2%;
-        height: 350px;
-    }
-}
-
 /*Footer Desktop*/
 @media(min-width:1080px){
     .footer-content{
@@ -345,54 +322,11 @@ footer {
         display: block;
     }
 
-    .footer-bottom {
-        padding: 0% 0% 0% 2%;
-        height: 50px;
+    .footerspalte .social-icons {
+        display: flex;
+        gap: 10px;
     }
 }
-
-/* Responsive Layout für iPad (768px bis 1080px) */
-@media (min-width: 768px){
-    .testimonials {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
-        gap: 2%; /* Abstand zwischen den Testimonials */
-        margin-top: 1%;
-    
-    }
-
-    .person {
-        width: 100%; /* Volle Breite */
-   
-    }
-    .container-get-started {
-        display: flex;          /* Aktiviert Flexbox Container*/
-        flex-direction: row;    /* Inhalt in einer Reihe */
-        align-items: center;
-        width: 100%;
-        margin-top: 2%;
-        border-radius: 10px;
-        border-color: var(--UI); 
-        box-shadow: 5px 10px 18px var(--UI);
-    }
-    .get-started {
-        width: 50%;
-        padding: 5%;
-    }
-    .get-started-img {
-        display:block;
-        width: 50%;
-        height: 500px;
-    }
-    
-    .get-started-img img{
-        width:100%;
-        height:100%;
-        object-fit: cover;
-        border-radius: 0px 10px 10px 0px;
-    }
-}
-
 
 /*Responsive für desktop - grösser als 768px überschreibt der untenstehende code den obigen Style*/
 @media(min-width:1080px){
@@ -467,7 +401,6 @@ footer {
     .testimonials {
         display: flex;
         flex-direction: row;
-        flex-direction: row; 
         justify-content: space-between;
         margin-top: 1%;
         gap: 20px;
@@ -478,5 +411,5 @@ footer {
         width: 25%;
         height: 500px;
     }
-
+ 
  }
