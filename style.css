@@ -233,13 +233,13 @@ nav a {
 
 .testimonials {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    flex-direction: column;
+    margin-top: 0px;
     height: 400px;
 }
 
 .person {
-    width: 25%;
+    width: 90%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -385,5 +385,18 @@ justify-content: left;
          border-radius: 10px;             /* Abgerundete Ecken */
          
      }
+
+
+    .testimonials {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+        height: 400px;
+    }
+
+    .person {
+        width: 25%;
+    }
  
  }
