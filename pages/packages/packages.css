@@ -618,7 +618,7 @@ footer {
 /* Media Queries für verschiedene Bildschirmgrößen */
 
 /* Tablet: Bildschirmbreiten zwischen 768px und 1024px */
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
     .packages {
         gap: 10px;
     }
@@ -676,26 +676,5 @@ footer {
     .cta .button {
         padding: 10px;
         font-size: 16px;
-    }
-}
-
-/* Kleine Smartphones: Bildschirmbreiten unter 480px */
-@media (max-width: 480px) {
-    .package img {
-        height: 100px;
-    }
-
-    .cta .button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    nav a {
-        font-size: 14px;
-    }
-
-    .footer-social img {
-        width: 20px;
-        height: 20px;
     }
 }
