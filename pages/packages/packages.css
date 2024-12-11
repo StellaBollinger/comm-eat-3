@@ -344,9 +344,7 @@ footer {
     height: 30px;
 }
 
-/* Media Queries für verschiedene Bildschirmgrößen */
 
-/* Tablet: Bildschirmbreiten zwischen 768px und 1024px */
 @media (max-width: 1024px) {
     .packages {
         gap: 10px;
@@ -370,7 +368,7 @@ footer {
     }
 }
 
-/* Smartphone: Bildschirmbreiten unter 768px */
+
 @media (max-width: 768px) {
     .packages {
         flex-direction: column;
@@ -408,7 +406,7 @@ footer {
     }
 }
 
-/* Kleine Smartphones: Bildschirmbreiten unter 480px */
+
 @media (max-width: 480px) {
     .package img {
         height: 100px;
@@ -464,7 +462,7 @@ header img {
 }
 
 header img:hover {
-    transform: scale(1.1); /* Vergrößerung beim Hover */
+    transform: scale(1.1);
 }
 
 nav ul {
@@ -488,7 +486,7 @@ nav a {
 
 nav li:hover {
     background-color: var(--SBB-red);
-    transform: translateY(-3px); /* Hebt das Element leicht an */
+    transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -525,7 +523,7 @@ nav li:hover {
 }
 
 .package:hover {
-    transform: scale(1.05); /* Vergrößert die Box leicht beim Hover */
+    transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -536,7 +534,7 @@ nav li:hover {
 }
 
 .package h2:hover {
-    color: var(--SBB-red); /* Farbe wechselt beim Hover */
+    color: var(--SBB-red);
 }
 
 .package ul {
@@ -549,15 +547,23 @@ nav li:hover {
     margin: 10px 0;
 }
 
+/* Zentriere Logos und gleiche Höhe */
+.package_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; /* Einheitliche Höhe für alle Logos */
+}
+
 .package img {
-    height: 150px;
-    width: auto;
-    margin-top: 10px;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Verhindert Verzerrung */
     transition: transform 0.3s ease;
 }
 
 .package img:hover {
-    transform: rotate(5deg); /* Bild rotiert leicht beim Hover */
+    transform: rotate(5deg);
 }
 
 .cta {
@@ -577,7 +583,7 @@ nav li:hover {
 
 .cta .button:hover {
     background-color: var(--primary-hover);
-    transform: translateY(-5px); /* Button hebt sich an */
+    transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -597,6 +603,7 @@ footer {
     flex: 1 1 200px;
 }
 
+/* Gleiche Größe für alle Social-Media-Icons */
 .footer-social img {
     width: 30px;
     height: 30px;
@@ -604,13 +611,8 @@ footer {
 }
 
 .footer-social img:hover {
-    transform: scale(1.1); /* Vergrößerung */
-    filter: brightness(1.2); /* Aufhellung beim Hover */
-}
-
-.footer-social a:nth-child(2) img {
-    width: 25px; /* Verkleinerte Breite nur für Instagram */
-    height: 25px; /* Verkleinerte Höhe nur für Instagram */
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
 /* Media Queries für verschiedene Bildschirmgrößen */
