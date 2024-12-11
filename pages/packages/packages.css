@@ -160,15 +160,21 @@ nav a {
     flex-wrap: wrap;
     gap: 20px;
     margin: 20px;
+    justify-content: space-between;
 }
 
 .package {
-    flex: 1 1 calc(33.33% - 20px);
+    flex: 1 1 calc(33.33% - 20px); /* Drei Boxen nebeneinander */
     padding: 20px;
     background-color: var(--UI-light);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px; /* Gleiche Mindesthöhe für alle Boxen */
+    max-height: 400px; /* Maximale Höhe für Konsistenz */
 }
 
 .package:hover {
@@ -206,13 +212,13 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px; /* Einheitliche Höhe für alle Logos */
+    height: 150px;
 }
 
 .package img {
     max-height: 100%;
     max-width: 100%;
-    object-fit: contain; /* Verhindert Verzerrung */
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
@@ -284,60 +290,95 @@ footer {
     }
 }
 
-/* Tablet: Bildschirmbreiten zwischen 768px und 1024px */
-@media (max-width: 1080px) {
-    .packages {
-        gap: 10px;
-    }
+/* "Folgen Sie uns"-Box rechts ausrichten */
+.footer-social {
+    flex: 1 1 200px;
+    text-align: right; /* Text und Inhalte rechts ausrichten */
+}
 
-    .package {
-        flex: 1 1 calc(50% - 10px);
-    }
+.footer-social .social-icons {
+    display: inline-flex;
+    gap: 10px;
+}
 
-    header {
+/* Mobile Ansicht (unter 768px) */
+@media (max-width: 768px) {
+    .footer-content {
         flex-direction: column;
-        padding: 20px;
+        align-items: center;
+        text-align: center; /* Zentriert Text und Inhalte */
+        gap: 15px; /* Verkleinerter Abstand zwischen den Sektionen */
     }
 
-    nav ul {
-        gap: 10px;
-    }
-
-    nav li {
-        padding: 5px 20px;
+    .footer-social {
+        text-align: center; /* Inhalte ebenfalls zentrieren */
+        margin-top: 10px; /* Abstand zur oberen Sektion */
     }
 }
 
-/* Smartphone: Bildschirmbreiten unter 768px */
+/* Sehr kleine Smartphones (unter 480px) */
+@media (max-width: 480px) {
+    .footer-content {
+        gap: 10px; /* Noch engerer Abstand */
+    }
+
+    .footer-social .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+
+/* Media Queries */
+
+/* Tablet-Ansicht (768px bis 1024px) */
+@media (max-width: 1024px) {
+    .packages {
+        gap: 15px;
+    }
+
+    .package {
+        flex: 1 1 calc(50% - 15px); /* Zwei Boxen nebeneinander */
+    }
+}
+
+/* Mobile Ansicht (unter 768px) */
 @media (max-width: 768px) {
+    header {
+        padding: 15px; /* Mehr Platz für mobile Ansicht */
+    }
+
+    header img {
+        margin-bottom: 25px; /* Größerer Abstand zwischen Logo und Navigation */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Abstand zwischen den Navigationspunkten */
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
     .packages {
         flex-direction: column;
         gap: 20px;
     }
 
     .package {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* Volle Breite */
+        min-height: 350px; /* Anpassung der Höhe für kleinere Bildschirme */
     }
+}
 
-    header {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav li {
-        padding: 10px 20px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero {
-        padding: 20px;
+/* Kleine Smartphones: Bildschirmbreiten unter 480px */
+@media (max-width: 480px) {
+    .package img {
+        height: 100px;
     }
 
 }
