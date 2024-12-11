@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Einbindung Icon-Bibliothek nach: https://www.w3schools.com/howto/howto_css_social_media_buttons.asp -->
+    <title>comm-eat Kontakt</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+    </header>
+
+    <nav>
+       <div class="logo">
+        <img src="/assets/logo.svg"> 
+       </div>
+        
+        <ul>
+            <a href="/index.html"><li>Home</li></a>
+            <a href="/pages/about/about.html"><li>Über uns</li></a>
+            <a href="/pages/packages/packages.html"><li>Packages</li></a>
+            <a href="#" class="active"><li>Kontakt</li></a>
+        </ul>
+    </nav>
+
+    <main>
+            <div class="left">
+                
+            </div>
+
+            <form class="right">
+                <h1>Kontakt</h1>
+                <label for="firstname">Vorname</label>
+                <input type="text" name="firstname" placeholder="Max">
+                
+                <label for="surname">Nachname</label>
+                <input type="text" name="surname" placeholder="Müller">
+
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" placeholder="name@email.com">
+
+                <label for="phone">Telefon</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="079 123 45 67">
+
+                <p><label for="message">Nachricht</label></p>
+                <textarea id="message" name="message" rows="4" cols="50">Wie können wir Ihnen weiter helfen?</textarea>
+
+                <button type="submit">Senden</button>
+            </form>
+    </main>
+
+
+
+    <footer>
+        <img src="/assets/logo.svg">
+        
+        <div class="spalten">
+            <div class="spalte"> 
+                <h4>Kontakt</h4> 
+                <p>comm-eat gmbh<br>Holzikofenweg 8<br>3001 Bern</p>
+            </div>
+
+            <div class="spalte2">
+                <h4>Quick Access</h4> 
+                <ul>
+                    <a href="/index.html"><li>Home</li></a>
+                    <a href="/pages/about/about.html"><li>Über uns</li></a>
+                    <a href="/pages/packages/packages.html"><li>Packages</li></a>
+                    <a href="#" class="active"><li>Kontakt</li></a>
+                </ul>
+            </div>
+
+            <div class="spalte3">
+               <div class="icons">
+                <h4>Follow us</h4>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-twitter"></a>  
+            </div>    
+         
+            </div>
+        </div>
+
+        <div class="line">
+            <p>	&copy 2024 comm-eat</p>
+            
+        </div>
+
+    </footer>
+
+</body>
+</html>

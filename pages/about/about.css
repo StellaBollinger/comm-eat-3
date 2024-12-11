@@ -1,0 +1,497 @@
+:root {
+  --primary: #0DA09D;
+  --primary-hover: #097674;
+  --SBB-red: #eb0000;
+  --SBB-red-hover: #b40000;
+  --UI-light: #d9d9d9;
+  --UI-dark: #b9b9b9;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* border box bedeutet, dass der Browser zum Content der Box den Border automatisch dazu rechent
+und man nicht manuell alles adjusten muss.  */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    /* position: relative; */
+  }
+
+  nav ul {
+    flex-direction: column; /* Menü vertikal ausrichten */
+    gap: 10px;
+    margin: 20px; 
+  }
+
+  nav li {
+    padding: 10px 20px;
+  }
+}
+
+
+header {
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header img {
+  height: 40px;
+  filter: invert(1);
+}
+
+/* Start Navigation styling */
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+nav li {
+  padding: 10px 40px;
+  border-radius: 20px;
+  background-color: var(--primary-hover);
+  transition: all 0.2s ease;
+  
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+nav li:hover {
+  background-color: var(--SBB-red);
+}
+/* End Navigation styling */
+
+/* Start Main Styling */
+
+.about_overview{
+  background-color: var(--UI-light);
+  padding-top: 1rem;
+}
+
+.Wert-container {
+  display: flex;
+  flex-wrap: wrap; /* Boxen umbrechen, wenn der Platz nicht ausreicht */
+  gap: 20px; /* Abstand zwischen den Boxen */
+  justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
+  padding: 20px;
+}
+
+
+.Unsere_Werte h2 {
+  text-align: center;
+  margin-bottom: 40px; /* Abstand zur Containerbox */
+  color: var(--primary);
+  font-size: 2rem; /* Optional: größere Schrift */
+}
+
+
+.Wert {
+  display: flex;
+  flex-direction: column; /* Text und Bild vertikal anordnen */
+  align-items: center; /* Zentriere Inhalte horizontal */
+  justify-content: center; /* Zentriere Inhalte vertikal */
+  text-align: center; /* Textausrichtung */
+  background-color: var(--primary);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(25% - 20px); /* Flexbox sorgt für vier gleich große Boxen */
+  max-width: calc(25% - 20px); /* Maximalbreite der Box */
+  height: 250px; /* Einheitliche Höhe */
+}
+
+
+@media (max-width: 600px) {
+  .Wert {
+    flex: 1 1 100%; /* Eine Box nimmt die volle Breite ein */
+    max-width: 100%; /* Entferne die Maximalbreite */
+    height: auto; /* Höhe basierend auf dem Inhalt */
+    width: 90%; /* Breite auf 90% des Viewports begrenzen */
+    margin-bottom: 20px; /* Abstand zwischen den Boxen */
+  }
+}
+@media (max-width: 480px) {
+  .Wert-container {
+    flex-direction: column; /* Boxen übereinander anordnen */
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
+.Wert h3 {
+  margin-bottom: 10 px; /* Abstand zwischen Text und Bild */
+  color: var(--primary-hover);
+  margin-top: 30px;
+  background-color: var(--UI-light);
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.Wert img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.Wert img:hover {
+  transform: scale(1.1); /* Vergrößerung bei Hover */
+}
+
+
+.Unsere_Werte .Wert{ 
+  flex: 1 1 calc(25% -20px);
+}
+
+.Unsere_Werte{
+  padding: 5rem; 
+}
+/* Start Geschichte Sytling */
+
+
+.Geschichte {
+  padding-top: 40px;
+  background-color: var(--UI-dark);
+  padding: 4rem; 
+}
+
+.Schwestern {
+  display: flex;
+  align-items: flex-start; 
+ justify-content: space-around;
+  gap: 20px; /* Abstand zwischen Bild und Text */
+  padding: 20px;
+}
+
+
+.Geschichte h2{
+  text-align: center;
+  margin-bottom: 40px; /* Abstand zur Containerbox */
+  color: var(--primary);
+  font-size: 2rem; /* Optional: größere Schrift */
+  background-color: var(--UI-light);
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.Schwestern_img {
+  border-radius: 15px; /* Abrundung der Ecken */
+  overflow: hidden; /* Bild innerhalb des Containers bleibt begrenzt */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatteneffekt */
+  flex-shrink: 0; /* Verhindert, dass das Bild zu klein wird */
+  justify-content: stretch;
+}
+
+.Schwestern_img img {
+  width: 680px; /* Festgelegte Breite des Bildes */
+  height: 300px; /* Festgelegte Höhe des Bildes */
+  object-fit: cover; /* Verhindert Verzerrung und schneidet das Bild passend zu */
+}
+
+.Text {
+  flex: 1; /* Nimmt den restlichen verfügbaren Platz ein */
+}
+
+.Text p {
+  font-size: 16px; /* Schriftgröße */
+  line-height: 1.63; /* Zeilenhöhe für bessere Lesbarkeit */
+  color: #333; /* Textfarbe */
+  margin: 0; /* Entfernt Standardabstand des Paragraphen */
+  background-color: var(--UI-light);
+  border-radius: 20px;
+  text-align: justify;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .Schwestern {
+    flex-direction: column; /* Elemente vertikal anordnen */
+    align-items: center;
+  }
+
+  .Schwestern_img img {
+    width: 100%; /* Bild passt sich der Breite an */
+    height: auto; /* Automatische Höhe */
+  }
+
+  .Text {
+    padding: 20px;
+  }
+}
+
+/* Ende Geschichte Styling */
+
+
+/* Start Team Styling */
+
+@media (max-width: 768px) {
+  .Team_Container .Team {
+    flex-direction: column; /* Stapelt Bild und Text vertikal */
+    align-items: flex-start; /* Linksbündige Ausrichtung */
+    flex: 1 100%; 
+    max-width: 100%;
+    height: auto; 
+  }
+}
+
+@media (max-width: 768px) {
+  .Teammember {
+    flex: 1 1 100%; /* Box nimmt die gesamte Breite ein */
+    max-width: 100%;
+    margin-bottom: 20px; /* Abstand zwischen den Boxen */
+  }
+
+  .Teammember img {
+    width: 150px; /* Kleinere Bilder */
+    height: auto;
+  }
+}
+.Team h2{
+  text-align: center;
+  margin-bottom: 40px; /* Abstand zur Containerbox */
+  color: var(--primary);
+  font-size: 2rem; /* Optional: größere Schrift */
+  margin-top: 40px;
+}
+
+.Team_Container{
+  display: flex;
+  flex-wrap: wrap; /* Boxen umbrechen, wenn der Platz nicht ausreicht */
+  gap: 20px; /* Abstand zwischen den Boxen */
+  justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
+  padding: 20px;
+}
+
+.Teammember {
+  display: flex;
+  flex-direction: column; /* Text und Bild vertikal anordnen */
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly; /* Zentriere Inhalte vertikal */
+  text-align: center; /* Textausrichtung */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.33% - 20px); /* 3 Elemente pro Zeile */
+  max-width: calc(33.33% - 20px); /* Maximalbreite auf ein Drittel setzen */
+  height: 250px; /* Einheitliche Höhe bleibt erhalten */
+  position: relative; /* Ermöglicht das Positionieren von Kind-Elementen relativ zur Box */
+  overflow: hidden; /* Verhindert, dass der Inhalt außerhalb der Box sichtbar wird */
+}
+
+.Teammember p{
+  font-style: italic;
+  font-family: 'Courier New', Courier, monospace; 
+  gap: 5px;
+  font-size: 14px;
+}
+
+.Teammember img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 20px;
+}
+
+.Team .Teammember {
+  flex: 1 1 calc(33.33% - 20px); /* Gleiche Anpassung wie oben */
+}
+
+.Teammember::after {
+  content: attr(data-email); /* E-Mail-Adresse wird aus dem `data-email`-Attribut gezogen */
+  position: absolute;
+  bottom: 5%;
+  left: 65%;
+  transform: translateX(-50%) translateY(100%); /* Start außerhalb der Sicht */
+  background-color: var(--primary-hover); /* Hintergrundfarbe der E-Mail */
+  color: white; /* Textfarbe */
+  padding: 10px;
+  border-radius: 10px;
+  white-space: nowrap; /* Verhindert, dass die E-Mail umbricht */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0; /* Unsichtbar, solange kein Hover-Effekt aktiv ist */
+}
+
+.Teammember:hover::after {
+  transform: translateX(-50%) translateY(0); /* Sichtbar bei Hover */
+  opacity: 1; /* E-Mail erscheint */
+}
+
+/* Ende Team Styling */
+
+/* Start Organigramm Styling */
+.Organisation{
+  background-color: var(--UI-dark);
+  padding: 1rem; 
+}
+
+.Organisation h2{
+  text-align: center;
+  margin-bottom: 40px; /* Abstand zur Containerbox */
+  color: var(--primary);
+  font-size: 2rem; /* Optional: größere Schrift */
+  margin-top: 60px;
+}
+
+.Orga_Container{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
+.Orga_Container img{
+  object-fit: cover;
+  align-items: center;
+  border-radius: 20px;
+  width: 600px; 
+  height: 600px;
+  margin: 2rem; 
+}
+
+.Orga_Text{
+  font-size: 16px; /* Schriftgröße */
+  line-height: 1.63; /* Zeilenhöhe für bessere Lesbarkeit */
+  color: #333; /* Textfarbe */
+  margin: 2rem; /* Entfernt Standardabstand des Paragraphen */
+  background-color: var(--UI-light);
+  border-radius: 20px;
+  text-align: justify;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .Orga_Container {
+    flex-direction: column; /* Stapele Bild und Text */
+    align-items: center; /* Zentriere den Inhalt */
+  }
+
+  .Orga_Container img {
+    width: 100%; /* Bild füllt die Breite */
+    height: auto; /* Höhe passt sich an */
+    margin: 0; /* Kein externer Rand */
+  }
+
+  .Orga_Text {
+    margin: 20px 0; /* Vertikaler Abstand */
+  }
+}
+
+/* Ende Organigramm Styling */
+
+
+/* Start Footer Styling */
+footer {
+  background-color: var(--UI-light);
+  color: white;
+  padding: 40px 20px;
+  text-align: left;
+
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap; /* Flexibles Layout für mobile Ansichten */
+  justify-content: space-between;
+  gap: 200px;
+  margin-bottom: 20px;
+  padding: 40px;
+}
+
+.footer-content div {
+  flex: 1; /* Gleiche Breite der Spalten */
+  min-width: 200px;
+justify-content: left;
+}
+
+.footer-about h3,
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+
+}
+
+.footer-about p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+
+}
+
+.footer-contact a:hover {
+  color: var(--SBB-red);
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 10px;
+
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--UI-dark);
+  padding-top: 20px;
+  font-size: 14px;
+  color: var(--UI-dark);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-about, .footer-contact, .footer-social {
+    margin-bottom: 20px; /* Abstand zwischen den Abschnitten */
+  }
+}
+
+/* Ende Footer Styling */

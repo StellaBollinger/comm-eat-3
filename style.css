@@ -1,0 +1,403 @@
+:root {
+    --primary: #0DA09D;
+    --primary-hover: #097674;
+    --SBB-red: #eb0000;
+    --SBB-red-hover: #b40000;
+    --UI-light: #d9d9d9;
+    --UI-dark: #b9b9b9;
+    --primary-transparent: rgba(13, 160, 157, 0.8);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header img {
+    height: 40px;
+    filter: invert(1);
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+nav li {
+    padding: 10px 40px;
+    border-radius: 20px;
+    background-color: var(--primary-hover);
+    transition: all 0.2s ease;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+nav li:hover {
+    background-color: var(--SBB-red);
+}
+
+main {
+    flex: 1;
+    padding: 20px 40px;
+}
+
+.hero {
+    height: 600px;
+    background-image: url('assets/Zielgruppe.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Verhindert, dass der Link über den Rand hinausreicht */
+}
+
+.hero-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.get-started {
+    text-align: center;
+    margin: 20px 0;
+    padding: 50px;
+    background-color: var(--UI-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+}
+
+.get-started p {
+    text-align: left;
+    font-size: 18px;
+    margin: 10px;
+    margin-left: 30px;
+}
+
+.get-started ul {
+    list-style: none;
+    padding: 0;
+}
+
+.get-started li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.get-started .checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    margin-right: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.get-started .checkbox::before {
+    content: "✔";
+    font-size: 12px;
+    color: var(--primary);
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    border-radius: 100px;
+    background-color: var(--primary);
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.05);
+}
+
+.container {
+    display: flex;          /* Aktiviert Flexbox für den Container */
+    gap: 20px;              /* Abstand zwischen den Flexboxen */
+}
+
+.icons {
+        height: 450px;
+        background-image: url('assets/icons_all_hover.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 1.0s ease, background-color 0.5s ease;
+        padding: 0;
+}
+
+.icons:hover
+{
+    background-image: url('assets/icons_all.png');
+    background-color:var(--UI-light);
+}
+
+.icon-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+} 
+
+.about {
+    display: flex;                   /* Flexbox für horizontale Anordnung */
+    align-items: center;             /* Zentriert Inhalte vertikal */
+    justify-content: space-between;  /* Maximiert den Platz zwischen Text und Bild */
+    gap: 40px;                       /* Abstand zwischen Text und Bild */                  
+    padding: 40px;                   /* Innenabstand */
+    background-color: var(--UI-light); /* Hintergrundfarbe */
+    border-radius: 10px;             /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+}
+
+.about-text {
+    flex: 1;                         /* Nimmt den verfügbaren Platz ein */
+    text-align: left;
+    padding: 40px;
+}
+
+.about-text h2 {
+    font-size: 24px;                 /* Große, auffällige Überschrift */
+    margin-bottom: 20px;
+    color: var(--primary-hover);
+}
+
+.about-text p {
+    font-size: 18px;                            
+    margin-bottom: 40px;
+    margin-right: 100px;
+    line-height: 1.4;
+}
+
+.button_2 {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    border-radius: 100px;
+    background-color: var(--primary);
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    position: center;
+}
+
+.button_2:hover {   
+    background-color: var(--primary-hover);
+    transform: scale(1.05);
+}
+
+.button-container {
+    display: flex;               /* Aktiviert Flexbox */
+    justify-content: right;     /* Zentriert horizontal */
+    align-items: center;         /* Zentriert vertikal */
+    height: 100%;                /* Füllt die gesamte Höhe der .about-text-Box */
+    margin-right: 100px;
+    margin-top: 10px;
+}
+
+.about-image {
+    flex: 1;                         /* Bild nimmt gleichen Platz ein wie Text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;                 /* Bild passt sich an den verfügbaren Platz an */
+    height: auto;                    /* Bewahrt das Seitenverhältnis */
+    border-radius: 10px;             /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatten für Tiefe */
+    background-color: var(--UI-dark); /* Hintergrundfarbe */
+     
+}
+
+.testimonials {
+    margin: 70px 0;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-hover);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    padding: 20px;
+    background-color: var(--UI-light);
+
+}
+
+.testimonials h4 {
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+    color: var(--UI-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    padding: 10px;
+    padding-left: 20px;
+    background-color: var(--primary-hover);
+
+}
+
+.testimonials-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.testimonials .person {
+    flex: 1 1 calc(25% - 20px);
+    text-align: center;
+    background-color: var(--primary-transparent);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials .person img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.testimonials .person img:hover {
+    transform: scale(1.0);
+}
+
+/* footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary);
+    color: white;
+    margin-top: auto;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+} */
+
+footer {
+    background-color: var(--UI-light);
+    color: white;
+    padding: 40px 20px;
+    text-align: left;
+
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Flexibles Layout für mobile Ansichten */
+    justify-content: space-between;
+    gap: 200px;
+    margin-bottom: 20px;
+    padding: 40px;
+}
+
+.footer-content div {
+    flex: 1; /* Gleiche Breite der Spalten */
+    min-width: 200px;
+justify-content: left;
+}
+
+.footer-about h3,
+.footer-contact h3,
+.footer-social h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+.footer-about p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-contact a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+
+}
+
+.footer-contact a:hover {
+    color: var(--SBB-red);
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 10px;
+
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--UI-dark);
+    padding-top: 20px;
+    font-size: 14px;
+    color: var(--UI-dark);
+    text-align: center;
+}
+

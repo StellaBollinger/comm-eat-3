@@ -1,0 +1,226 @@
+:root {
+    /* Farben */
+    --primary: #0DA09D;
+    --primary_hover: #097674;
+    --SBB_red: #eb0000;
+    --SBB_red_hover: #b40000;
+    --UI: #d9d9d9;
+    --UI_dark: #b9b9b9;
+
+    --primary-alpha-20: rgba(13, 160, 157, .2);
+}
+
+/*Style Navigation Mobile*/
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 82px;
+    border-style: solid;
+    border-color: var(--UI);
+    border-width: 0px 0px 1px 0px;
+    box-shadow: 0 10px 10px 0 rgba(181, 181, 181, 0.038),0 4px 4px 0 rgba(189, 189, 189, 0.11);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0px;
+}
+
+img{
+    height: 20px;
+}
+
+nav li {
+    padding: 10px 10px;
+    color: black;
+}
+
+nav .active li {
+    font-weight:bolder;
+    text-decoration: underline;
+    text-decoration-color:var(--primary);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 16px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+/*Style Navigation Desktop*/
+@media(min-width:768px){
+    nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0% 2% 0% 2%;
+    }
+
+    nav ul{
+        gap: 20px;
+    }
+}
+
+/*Style Allgemein*/
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*Style Kontakt Seite - Aufbau flexbox Elemente*/
+
+body { 
+    margin:0px;
+    padding: 0px;
+    display: flex; /*Übergeordnetes Element*/
+    flex-direction: column; /*Anordnung der untergeordneten Elemente (Navigation/Main/Footer) column= vertikal gestapelt*/
+}
+
+main{
+    display: flex; /*Übergeordnetes Element*/
+    flex-direction: column;
+    justify-content: center; /*Untergeordnete Elemente (div und form) in Horinzontale Linie in der Mitte anorden*/
+    width: 100%;
+    align-self: center;
+}
+
+.left {
+    background-color: #bed8d7;
+    margin: 0px;
+    padding: 0px;
+    height: 150px;
+    border-radius: 0px;
+}
+
+form{
+    display: flex; /*Übergeordnetes Element*/
+    justify-content: center; /*Inhalte zentrieren*/
+    flex-direction: column; /*Inhalte untereinander auflisten*/
+    padding:30px;
+}
+
+
+/*Responsive für desktop - grösser als 768px überschreibt der untenstehende code den obigen Style*/
+@media(min-width:768px){
+    main{
+    display: flex; /*Übergeordnetes Element*/
+    flex-direction: row;
+    justify-content: center; /*Untergeordnete Elemente (div und form) in Horinzontale Linie in der Mitte anorden*/
+    width: 70%;
+    align-self: center;
+    border-radius: 10px;
+    border-color: var(--UI); 
+    box-shadow: 5px 10px 18px var(--UI);
+    margin: 5%;
+    padding: 0%;
+    }
+
+    .left {
+    border-radius: 10px 0px 0px 10px;
+    height: auto;
+    width: 50%;
+    }
+
+    form{
+        width: 50%;
+        padding:5% 10% 5% 5%;
+    }
+
+    button{
+       width: 40%;
+       margin-top: px;
+    }
+}
+
+
+/*Style Elemente*/
+h1{
+    margin: 0px;
+}
+
+form label{
+    font-weight:bold;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    color: #000000;
+}
+
+form input{
+    border-width: 0px 0px 1px 0px;
+    border-color: var(--UI); 
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+form textarea {
+    border-width: 1px 1px 1px 1px;
+    border-radius: 4px;
+    border-color: var(--UI); 
+    padding: 8px 10px 8px 10px;
+}
+
+button{
+    font-weight: 100;
+    border-radius: 40px;
+    border:0px;
+    padding:20px;
+    margin-top:30px;
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.10),0 5px 5px 0 rgba(0, 0, 0, 0.11);
+}
+
+button:hover {
+    background-color: var(--primary_hover);
+}
+
+/*Style footer*/
+footer{
+    border-style: solid;
+    border-color: var(--UI);
+    border-width: 1px 0px 0px 0px;
+    padding: 2%;
+}
+
+
+/*Style Footer*/
+
+.spalten{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.spalte {
+    width: 20%;
+}
+
+.spalte2 {
+    width: 40%;
+}
+.spalte2 ul {
+    margin: 0;
+    padding:0;
+}
+
+.spalte2 ul a{
+    text-decoration: none;
+    list-style: none;
+}
+
+.spalte3 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.spalte3 a{
+    text-decoration: none;
+    color: #000000;
+}
