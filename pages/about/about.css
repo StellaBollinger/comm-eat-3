@@ -162,9 +162,13 @@ nav a {
 }
 
 .Wert-container {
-  display: flex;
-  gap: 20px; /* Abstand zwischen den Boxen */
-  justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
+flex-wrap: wrap;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+gap: 20px; /* Abstand zwischen den Boxen */
+justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
 }
 
 
@@ -181,10 +185,9 @@ nav a {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 24%; 
+  width: 60%;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
 }
 
 .Wert h3 {
@@ -200,47 +203,31 @@ nav a {
 .Unsere_Werte{
   padding: 5rem; 
 }
-/* iPad Version */
-@media (max-width: 768px) {
-  .Wert {
-    flex: 1 1 100%; /* Eine Box nimmt die volle Breite ein */
-    max-width: 100%; /* Entferne die Maximalbreite */
-    height: auto; /* Höhe basierend auf dem Inhalt */
-    width: 90%; /* Breite auf 90% des Viewports begrenzen */
-    margin-bottom: 20px; /* Abstand zwischen den Boxen */
 
-  }
-}
+/* iPad Version */
 @media (min-width: 768px) {
   .Wert-container {
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-
+    flex-direction: row;
   }
 
-  .Wert{
-    width: 40%; 
+  .Wert {
+    width: 40%; /* Breite auf 90% des Viewports begrenzen */
+    height: 200px;
   }
+  
 }
 
 @media (min-width: 1080px) {
+
   .Wert-container {
-      display: flex;
-      gap: 20px; /* Abstand zwischen den Boxen */
-      justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
-    }
+    justify-content: space-around;
+  }
 
   .Wert {
-    display: flex;
-    background-color: #bed8d7;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 49%;
-    flex-direction: column;
-    align-items: center;
+    width:18%; 
   }
+
+
 }
 /* Start Geschichte Sytling */
 
