@@ -163,12 +163,8 @@ nav a {
 
 .Wert-container {
   display: flex;
-  flex-wrap: wrap; /* Boxen umbrechen, wenn der Platz nicht ausreicht */
   gap: 20px; /* Abstand zwischen den Boxen */
-  justify-content: center; /* Gleichmäßige Verteilung der Boxen */
-  padding: 20px;
-  width: 100%;
-  height: 60%;
+  justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
 }
 
 
@@ -179,22 +175,32 @@ nav a {
   font-size: 2rem; /* Optional: größere Schrift */
 }
 
-
 .Wert {
   display: flex;
-  flex-direction: column; /* Text und Bild vertikal anordnen */
-  align-items: center; /* Zentriere Inhalte horizontal */
-  justify-content: center; /* Zentriere Inhalte vertikal */
-  text-align: center; /* Textausrichtung */
   background-color: #bed8d7;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 1 1 1 calc(25% - 20px); /* Flexbox sorgt für vier gleich große Boxen */
-  max-width: calc(25% - 20px); /* Maximalbreite der Box */
+  width: 24%; 
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
+.Wert h3 {
+  text-align: center;
+}
 
+.Wert img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.Unsere_Werte{
+  padding: 5rem; 
+}
+/* iPad Version */
 @media (max-width: 768px) {
   .Wert {
     flex: 1 1 100%; /* Eine Box nimmt die volle Breite ein */
@@ -202,38 +208,39 @@ nav a {
     height: auto; /* Höhe basierend auf dem Inhalt */
     width: 90%; /* Breite auf 90% des Viewports begrenzen */
     margin-bottom: 20px; /* Abstand zwischen den Boxen */
+
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .Wert-container {
-    flex-direction: column; /* Boxen übereinander anordnen */
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+
+  }
+
+  .Wert{
+    width: 40%; 
   }
 }
 
-.Wert h3 {
-  margin-bottom: 10 px; /* Abstand zwischen Text und Bild */
-  color: var(--primary-hover);
-  margin-top: 30px;
-  background-color: var(--UI-light);
-  padding: 10px 20px;
-  border-radius: 20px;
-}
+@media (min-width: 1080px) {
+  .Wert-container {
+      display: flex;
+      gap: 20px; /* Abstand zwischen den Boxen */
+      justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
+    }
 
-.Wert img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.Wert img:hover {
-  transform: scale(1.1); /* Vergrößerung bei Hover */
-}
-
-.Unsere_Werte{
-  padding: 5rem; 
+  .Wert {
+    display: flex;
+    background-color: #bed8d7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 49%;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 /* Start Geschichte Sytling */
 
@@ -254,12 +261,9 @@ nav a {
 
 .Geschichte h2{
   text-align: center;
-  margin-bottom: 40px; /* Abstand zur Containerbox */
   color: var(--primary);
   font-size: 2rem; /* Optional: größere Schrift */
-  background-color: var(--UI-light);
   padding: 10px 20px;
-  border-radius: 20px;
 }
 
 .Schwestern_img {
@@ -275,14 +279,19 @@ nav a {
   object-fit: cover; /* Verhindert Verzerrung und schneidet das Bild passend zu */
 } 
 
-.Text p {
-  font-size: 16px; /* Schriftgröße */
-  line-height: 1.63; /* Zeilenhöhe für bessere Lesbarkeit */
-  color: #333; /* Textfarbe */
-  background-color: var(--UI-light);
-  border-radius: 20px;
-  text-align: justify;
-  padding: 2rem;
+@media (max-width: 768px) {
+  .Schwestern {
+    flex-direction: column; /* Elemente vertikal anordnen */
+    flex-wrap: wrap; /* Elemente umbrechen, wenn der Platz nicht ausreicht */
+    align-items: center; /* Zentriere Inhalte */
+    flex: 1 100%; /* Volle Breite */
+  }
+
+  .Schwestern_img img {
+    width: 100%; /* Bild passt sich der Breite an */
+    height: auto; /* Automatische Höhe */
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 1080px) {
@@ -304,9 +313,6 @@ nav a {
 
 
 /* Start Team Styling */
-
-
-
 
 .Team h2{
   text-align: center;
@@ -433,6 +439,10 @@ nav a {
   margin: 2rem; 
 }
 
+.Orga_Text h4{
+  color: var(--primary);
+}
+
 .Orga_Text{
   font-size: 16px; /* Schriftgröße */
   line-height: 1.63; /* Zeilenhöhe für bessere Lesbarkeit */
@@ -442,8 +452,10 @@ nav a {
   border-radius: 20px;
   text-align: justify;
   padding: 2rem;
+  background-color: #bed8d7;
 }
 
+/* Responsive iPad */
 @media (max-width: 768px) {
   .Orga_Container {
     flex-direction: column; /* Stapele Bild und Text */
@@ -453,11 +465,23 @@ nav a {
   .Orga_Container img {
     width: 100%; /* Bild füllt die Breite */
     height: auto; /* Höhe passt sich an */
-    margin: 0; /* Kein externer Rand */
+   
+  }
+}
+
+
+@media (max-width: 1080px) {
+  .Orga_Container {
+    flex-direction: column; /* Elemente vertikal anordnen */
+    flex-wrap: wrap; /* Elemente umbrechen, wenn der Platz nicht ausreicht */
+    align-items: center; /* Zentriere Inhalte */
+    flex: 1 100%; /* Volle Breite */
   }
 
-  .Orga_Text {
-    margin: 20px 0; /* Vertikaler Abstand */
+  .Orga_Container img {
+    width: 100%; /* Bild passt sich der Breite an */
+    height: auto; /* Automatische Höhe */
+    flex-wrap: wrap;
   }
 }
 
