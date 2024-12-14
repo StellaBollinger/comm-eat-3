@@ -184,21 +184,24 @@ form{
     padding:30px;
 }
 
+/*Style contact-sent page*/
+
 .sent{
     color: aquamarine;
     box-shadow: none;
     display: flex;
+    height: 400px;
     flex-direction: column;
     justify-content: center;
 }
 
 .sent img{
-    height: 30px;
+    height: 30%;
 }
 
 .sent h3{
     text-align: center;
-    margin-top: 40px;
+    margin: 0px;
 }
 
 .sent p{
@@ -208,6 +211,21 @@ form{
 .sent a{
     text-align: center;
 }
+
+/*Style ipad und Desktop contact-sent page*/
+@media(min-width:768px){
+    .sent{
+        height: 550px;
+    }
+
+    .sent img{
+        height: 40%;
+        margin-bottom: -30px;
+    }
+}
+
+
+/*Style ende contact-sent page*/
 
 /*Responsive für ipad - grösser als 768px überschreibt der untenstehende code den obigen Style*/
 @media(min-width:768px){
