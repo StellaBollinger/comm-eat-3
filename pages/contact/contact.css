@@ -184,6 +184,31 @@ form{
     padding:30px;
 }
 
+.sent{
+    color: aquamarine;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sent img{
+    height: 30px;
+}
+
+.sent h3{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.sent p{
+    text-align: center;
+}
+
+.sent a{
+    text-align: center;
+}
+
 /*Responsive für ipad - grösser als 768px überschreibt der untenstehende code den obigen Style*/
 @media(min-width:768px){
     main{
