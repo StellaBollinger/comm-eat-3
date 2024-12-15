@@ -17,6 +17,7 @@
 
 h1{
     margin: 0px;
+    text-align: center;
 }
 
 h2{
@@ -63,15 +64,16 @@ a:hover{
 
 
 button{
-    width: 40%;
+    width: 50%;
     font-weight: 200;
     border-radius: 40px;
     border:0px;
     padding:20px;
-    margin-top:30px;
+    margin: 5% 10% 10% 20%;
     background-color: var(--primary);
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.10),0 5px 5px 0 rgba(0, 0, 0, 0.11);
+
 }
 
 button:hover {
@@ -89,6 +91,7 @@ main{
 body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin:0px;
     padding: 0px;
 }
@@ -158,6 +161,7 @@ nav a {
 .hero {
     width: 100%;
     height: auto;
+    margin-bottom: 5%;
 }
 
 .hero img{
@@ -166,60 +170,115 @@ nav a {
     object-fit: cover;
 }
 
-.packages {
-    display: flex;           /* Flexbox aktivieren */
-    flex-wrap: wrap;         
-    gap: 20px;               /* Abstand zwischen den Boxen */
-    justify-content: space-between; /* Boxen gleichmäßig verteilen */
-    padding: 20px;   } 
+/*Packages Style Mobile*/
+.container-packages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10%;
+    border-radius: 10px;
+    border-color: var(--UI); 
+}
 
-.package {
-    flex: 1 1 calc(33.33% - 20px); /* Drei Boxen nebeneinander */
-    padding: 20px;
-    background-color: var(--UI-light);
+.packages {
+    width:100%;
+    margin-top: 5%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 400px; /* Gleiche Mindesthöhe für alle Boxen */
-    max-height: 400px; /* Maximale Höhe für Konsistenz */
 }
 
+.packages img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
 
-.package:hover {
+/*Packages section Style Liste*/
+.packages ul {
+    list-style: none;
+    margin: 10% 5% 5% 20%;
+}
+
+.packages li {
+    display: flex;
+    padding: 5px;
+}
+
+/*Packages Checkbox Gutzeichen*/
+.packages .checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Packages Checkbox Kreuz*/
+.packages .checkbox::before {
+    content: "✔";
+    font-size: 12px;
+    color: var(--primary);
+}
+
+.packages .checkbox-2 {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--SBB_red);
+    border-radius: 4px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.packages .checkbox-2::before {
+    content: "X";
+    font-size: 14px;
+    color: var(--SBB_red);
+}
+/*Ende Style Liste*/
+
+/*Style ipad*/
+
+
+
+
+/*Style Desktop*/
+@media (min-width: 1080px) {
+    .hero{
+        margin-bottom: 4%;
+    }
+
+    .container-packages {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0% 0% 0% 0%;
+    }
+    .packages {
+        width: 32%;
+        margin: 2%;
+        height: auto;
+    }
+
+    .packages:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    } 
+
 }
 
-.package h2 {
-    color: var(--primary-hover);
-    margin-bottom: 10px;
-    transition: color 0.3s ease;
-}
 
-.package h2:hover {
-    color: var(--SBB-red);
-}
 
-.package ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-}
 
-.package ul li {
-    margin: 10px 0;
-}
 
-.about{
-    align-self:center;
-    justify-content: center;
-}
 
-/* Zentriere Logos und gleiche Höhe */
-.package_image {
+
+
+/* .package_image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -235,7 +294,7 @@ nav a {
 
 .package img:hover {
     transform: rotate(5deg);
-}
+} */
 
 
 /*Footer Mobile*/
@@ -301,18 +360,4 @@ footer {
     }
 }
 
-@media (min-width: 1080px) {
-    .packages {
-        display: flex;              /* Flexbox aktivieren */
-        flex-wrap: nowrap;          /* Keine Zeilenumbrüche zulassen */
-        gap: 20px;                  /* Abstand zwischen den Boxen */
-        justify-content: space-between; /* Boxen gleichmäßig verteilen */
-    }
-
-    .package {
-        flex: 1 1 calc(33.33% - 20px); /* Drei gleich große Boxen */
-        max-width: calc(33.33% - 20px); /* Maximale Breite für Konsistenz */
-    }
-
-}
 
