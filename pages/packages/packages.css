@@ -352,9 +352,9 @@ nav a {
 
 /*Footer Mobile*/
 footer {
-    display: flex;            /*Übergeordnetes Element*/
+    display: flex;            
     flex-direction: column;
-    justify-content: center; /*Untergeordnete Elemente (div und form) in Horinzontale Linie in der Mitte anorden*/
+    justify-content: center; 
     width: 100%;
     margin-top: 5%;
     padding-bottom: 1%;
