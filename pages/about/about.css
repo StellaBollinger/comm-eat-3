@@ -62,22 +62,6 @@ a:hover{
 }
 
 
-button{
-  width: 40%;
-  font-weight: 200;
-  border-radius: 40px;
-  border:0px;
-  padding:20px;
-  margin-top:30px;
-  background-color: var(--primary);
-  color: white;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.10),0 5px 5px 0 rgba(0, 0, 0, 0.11);
-}
-
-button:hover {
-  background-color: var(--primary_hover);
-}
-
 main{
   display: flex; /*Übergeordnetes Element*/
   flex-direction: column;
@@ -156,11 +140,6 @@ nav a {
 
 /* Start Main Styling */
 
-.about_overview{
-  background-color: var();
-  padding-top: 1rem;
-}
-
 .Wert-container {
 flex-wrap: wrap;
 display: flex;
@@ -182,7 +161,7 @@ justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
 .Wert {
   display: flex;
   background-color: #bed8d7;
-  padding: 20px;
+  padding-top: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 60%;
@@ -211,7 +190,7 @@ justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
   }
 
   .Wert {
-    width: 40%; /* Breite auf 90% des Viewports begrenzen */
+    width: 40%; 
     height: 200px;
   }
   
@@ -229,20 +208,16 @@ justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
 
 
 }
+
 /* Start Geschichte Sytling */
 
-
 .Geschichte {
-  padding-top: 40px;
-  background-color: var(--UI-dark);
-  padding: 4rem; 
+  padding: 7rem; 
 }
 
 .Schwestern {
   display: flex;
   gap: 20px; /* Abstand zwischen Bild und Text */
-  flex-wrap: nowrap;
-  align-items: flex-start; /* Bild und Text vertikal ausrichten */
 }
 
 
@@ -250,7 +225,7 @@ justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
   text-align: center;
   color: var(--primary);
   font-size: 2rem; /* Optional: größere Schrift */
-  padding: 10px 20px;
+  margin-bottom: 40px;
 }
 
 .Schwestern_img {
@@ -269,33 +244,26 @@ justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
 @media (max-width: 768px) {
   .Schwestern {
     flex-direction: column; /* Elemente vertikal anordnen */
-    flex-wrap: wrap; /* Elemente umbrechen, wenn der Platz nicht ausreicht */
-    align-items: center; /* Zentriere Inhalte */
-    flex: 1 100%; /* Volle Breite */
   }
 
   .Schwestern_img img {
     width: 100%; /* Bild passt sich der Breite an */
     height: auto; /* Automatische Höhe */
-    flex-wrap: wrap;
+  
   }
 }
 
 @media (max-width: 1080px) {
   .Schwestern {
     flex-direction: column; /* Elemente vertikal anordnen */
-    flex-wrap: wrap; /* Elemente umbrechen, wenn der Platz nicht ausreicht */
-    align-items: center; /* Zentriere Inhalte */
-    flex: 1 100%; /* Volle Breite */
   }
 
   .Schwestern_img img {
     width: 100%; /* Bild passt sich der Breite an */
     height: auto; /* Automatische Höhe */
-    flex-wrap: wrap;
+    
   }
 }
-
 /* Ende Geschichte Styling */
 
 
@@ -306,7 +274,7 @@ justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
   margin-bottom: 40px; /* Abstand zur Containerbox */
   color: var(--primary);
   font-size: 2rem; /* Optional: größere Schrift */
-  margin-top: 40px;
+  
 }
 
 .Team_Container {
@@ -319,16 +287,14 @@ justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
 
 .Teammember {
   display: flex;
-  position: relative;
+  position: relative;  /*Braucht es für den Emailadressen Hover effect*/
   flex-direction: row; /* Bild links, Text rechts */
   align-items: center; /* Vertikale Zentrierung */
   justify-content: space-evenly; /* Inhalte von links nach rechts */
-  background-color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%; /* Volle Breite im Container */
-  max-width: 1200px; /* Begrenze Breite für größere Bildschirme */
 }
 
 .Teammember .text {
@@ -339,13 +305,12 @@ justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
 .Teammember .text p {
   font-style: italic;
   font-size: 14px;
-  margin: 5px 0 0;
   color: #666; /* Etwas hellere Schriftfarbe */
 }
 
 
 .Teammember img {
-  width: 280px; /* Bild passt sich der Breite der Box an */
+  width: 280px; 
   max-width: 150px; /* Begrenze die maximale Breite für größere Displays */
   height: 200px; /* Dynamische Höhe */
   object-fit: cover; /* Behalte das Seitenverhältnis */
@@ -393,15 +358,13 @@ justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
   .Teammember img {
     width: 100%; /* Bild passt sich an */
     max-width: 150px; /* Begrenze maximale Breite */
-    height: auto;
   }
 }
 /* Ende Team Styling */
 
 /* Start Organigramm Styling */
 .Organisation{
-  background-color: var(--UI-dark);
-  padding: 1rem; 
+  padding: 5rem; 
 }
 
 .Organisation h2{
@@ -409,7 +372,6 @@ justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
   margin-bottom: 40px; /* Abstand zur Containerbox */
   color: var(--primary);
   font-size: 2rem; /* Optional: größere Schrift */
-  margin-top: 60px;
 }
 
 .Orga_Container{
@@ -419,7 +381,6 @@ justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
 }
 .Orga_Container img{
   object-fit: cover;
-  align-items: center;
   border-radius: 20px;
   width: 600px; 
   height: 600px;
@@ -437,7 +398,6 @@ justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
   margin: 2rem; /* Entfernt Standardabstand des Paragraphen */
   background-color: var(--UI-light);
   border-radius: 20px;
-  text-align: justify;
   padding: 2rem;
   background-color: #bed8d7;
 }
@@ -446,7 +406,6 @@ justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
 @media (max-width: 768px) {
   .Orga_Container {
     flex-direction: column; /* Stapele Bild und Text */
-    align-items: center; /* Zentriere den Inhalt */
   }
 
   .Orga_Container img {
@@ -460,19 +419,16 @@ justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
 @media (max-width: 1080px) {
   .Orga_Container {
     flex-direction: column; /* Elemente vertikal anordnen */
-    flex-wrap: wrap; /* Elemente umbrechen, wenn der Platz nicht ausreicht */
     align-items: center; /* Zentriere Inhalte */
-    flex: 1 100%; /* Volle Breite */
   }
 
   .Orga_Container img {
     width: 100%; /* Bild passt sich der Breite an */
     height: auto; /* Automatische Höhe */
-    flex-wrap: wrap;
   }
 }
-
 /* Ende Organigramm Styling */
+
 
 /*Footer Mobile*/
 footer {
