@@ -64,12 +64,10 @@ a:hover{
 
 
 button{
-    width: 50%;
     font-weight: 200;
     border-radius: 40px;
     border:0px;
-    padding:20px;
-    margin: 5% 10% 10% 20%;
+    padding:20px 45px;
     background-color: var(--primary);
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.10),0 5px 5px 0 rgba(0, 0, 0, 0.11);
@@ -183,24 +181,27 @@ nav a {
 .packages {
     width:100%;
     margin-top: 5%;
+    padding-bottom: 10%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.packages img {
+.cardimg {
     width: 100%;
-    height: 300px;
+    height: 200px;
+}
+.packages img {
+    width:100%;
+    height:100%;
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
 }
 
 /*Packages section Style Liste*/
-.packages ul {
-    list-style: none;
-    margin: 10% 5% 5% 20%;
-}
-
 .packages li {
     display: flex;
     padding: 5px;
@@ -243,8 +244,53 @@ nav a {
 /*Ende Style Liste*/
 
 /*Style ipad*/
+@media (min-width: 768px) {
+    .hero{
+        margin-bottom: 4%;
+    }
+    .container-packages {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 5%;
+    }
 
+    .packages {
+        width: 32%;
+        margin-top: 2%;
+        padding-bottom: 5%;
+    }
+    .cardimg {
+        width: 100%;
+        height: auto;
+    }
+    .packages img {
+        height: 150px;
+    }
 
+    .packages ul li{
+        align-items: center;
+    }
+
+    /*Packages Checkbox Gutzeichen*/
+    .packages .checkbox {
+        width: 15px;
+        height: 15px;
+        align-items: center;
+    }
+    .packages .checkbox::before {
+        font-size: 10px;
+    }
+    
+    /*Packages Checkbox Kreuz*/
+    .packages .checkbox-2 {
+        width: 15px;
+        height: 15px;
+        align-items: center;
+    }
+    .packages .checkbox-2::before {
+        font-size: 12px;
+    }
+}
 
 
 /*Style Desktop*/
@@ -255,13 +301,17 @@ nav a {
 
     .container-packages {
         flex-direction: row;
-        justify-content: space-between;
-        margin: 0% 0% 0% 0%;
+        justify-content: center;
+        margin-bottom: 0%;
     }
     .packages {
-        width: 32%;
-        margin: 2%;
-        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 25%;
+        margin: 0% 1%;
+        padding-bottom: 2%;
+        align-items: center;
     }
 
     .packages:hover {
@@ -269,32 +319,35 @@ nav a {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     } 
 
+    .cardimg {
+        width: 100%;
+        height: auto;
+    }
+
+    .packages img {
+        height: 250px;
+    }
+
+     /*Packages Checkbox Gutzeichen*/
+     .packages .checkbox {
+        width: 20px;
+        height: 20px;
+        align-items: center;
+    }
+    .packages .checkbox::before {
+        font-size: 12px;
+    }
+    
+    /*Packages Checkbox Kreuz*/
+    .packages .checkbox-2 {
+        width: 20px;
+        height: 20px;
+        align-items: center;
+    }
+    .packages .checkbox-2::before {
+        font-size: 14px;
+    }
 }
-
-
-
-
-
-
-
-
-/* .package_image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-}
-
-.package img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.package img:hover {
-    transform: rotate(5deg);
-} */
 
 
 /*Footer Mobile*/
