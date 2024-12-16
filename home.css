@@ -1,0 +1,234 @@
+/*Style Home Page*/
+/*Header Bild*/
+.hero {
+    width: 100%;
+    height: auto;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*get started section Aufbau mobile*/
+.container-get-started {
+    margin-top: 2%;
+    border-radius: 10px;
+    border-color: var(--UI);
+}
+
+.get-started {
+    padding: 5%;
+}
+
+.get-started-img {
+    display: none;
+}
+
+/*get started section Style Liste*/
+.get-started ul {
+    list-style: none;
+    padding: 0;
+}
+
+.get-started li {
+    display: flex;
+    padding: 5px;
+}
+
+.get-started .checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.get-started .checkbox::before {
+    content: "✔";
+    font-size: 12px;
+    color: var(--primary);
+}
+/*Ende Style Section Get started*/
+
+.about {
+    display: flex; /* Flexbox für horizontale Anordnung */
+    flex-direction: column-reverse;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.about-text {
+    width: 100%;
+    text-align: left;
+    padding-right: 40px;
+}
+
+.about-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%; /* Bild passt sich an den verfügbaren Platz an */
+    height: auto; /* Bewahrt das Seitenverhältnis */
+    border-radius: 10px; /* Abgerundete Ecken */
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    height: 50%;
+}
+
+.person {
+    width: 90%;
+    align-self: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+    padding: 10px 20px 20px 20px;
+}
+
+.testimonials .person img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* Responsive Layout für iPad (768px bis 1080px) */
+@media (min-width: 768px) {
+    .testimonials {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
+        gap: 2%; /* Abstand zwischen den Testimonials */
+        margin-top: 1%;
+    }
+
+    .person {
+        width: 100%; /* Volle Breite */
+    }
+    .container-get-started {
+        display: flex; /* Aktiviert Flexbox Container*/
+        flex-direction: row; /* Inhalt in einer Reihe */
+        align-items: center;
+        width: 100%;
+        margin-top: 2%;
+        border-radius: 10px;
+        border-color: var(--UI);
+        box-shadow: 5px 10px 18px var(--UI);
+    }
+    .get-started {
+        width: 50%;
+        padding: 5%;
+    }
+
+    .get-started-img {
+        display: block;
+        width: 50%;
+        height: 500px;
+    }
+
+    .get-started-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0px 10px 10px 0px;
+    }
+}
+
+/*Responsive für desktop - grösser als 768px überschreibt der untenstehende code den obigen Style*/
+@media (min-width: 1080px) {
+    /*Header Bild*/
+    .hero {
+        width: 100%;
+        height: 600px;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /*get started section*/
+    .container-get-started {
+        display: flex; /* Aktiviert Flexbox Container*/
+        flex-direction: row; /* Inhalt in einer Reihe */
+        align-items: center;
+        width: 100%;
+        margin-top: 2%;
+        border-radius: 10px;
+        border-color: var(--UI);
+        box-shadow: 5px 10px 18px var(--UI);
+    }
+    .get-started {
+        width: 50%;
+        padding: 5%;
+    }
+    .get-started-img {
+        display: block;
+        width: 50%;
+        height: 500px;
+    }
+
+    .get-started-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    /*about section*/
+    .about {
+        display: flex; /* Flexbox für horizontale Anordnung */
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; /* Maximiert den Platz zwischen Text und Bild */
+        margin-top: 5%;
+    }
+    .about-text {
+        width: 50%;
+        text-align: left;
+        padding-right: 40px;
+    }
+
+    .about-image {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-image img {
+        max-width: 100%; /* Bild passt sich an den verfügbaren Platz an */
+        height: auto; /* Bewahrt das Seitenverhältnis */
+        border-radius: 10px; /* Abgerundete Ecken */
+    }
+
+    .testimonials {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1%;
+        gap: 20px;
+        height: 500px;
+    }
+
+    .person {
+        width: 25%;
+        height: 500px;
+    }
+}
