@@ -14,7 +14,7 @@
 h2 {
     text-align: center;
     margin-bottom: 40px; /* Abstand zur Containerbox */
-    color: var(--primary);
+    color: black;
     font-size: 2rem; /* Optional: größere Schrift */
 }
 

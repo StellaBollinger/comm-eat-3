@@ -11,7 +11,7 @@
 .Unsere_Werte h2 {
     text-align: center;
     margin-bottom: 40px; /* Abstand zur Containerbox */
-    color: var(--primary);
+    color: black;;
     font-size: 2rem; /* Optional: größere Schrift */
 }
 
@@ -37,7 +37,8 @@
 }
 
 .Unsere_Werte {
-    padding: 5rem;
+    padding: 0rem;
+    margin: 5% 0%;
 }
 
 /* iPad Version */
@@ -65,7 +66,7 @@
 /* Start Geschichte Sytling */
 
 .Geschichte {
-    padding: 7rem;
+    padding: 0%;
 }
 
 .Schwestern {
@@ -75,7 +76,6 @@
 
 .Geschichte h2 {
     text-align: center;
-    color: var(--primary);
     font-size: 2rem; /* Optional: größere Schrift */
     margin-bottom: 40px;
 }
@@ -121,7 +121,6 @@
 .Team h2 {
     text-align: center;
     margin-bottom: 40px; /* Abstand zur Containerbox */
-    color: var(--primary);
     font-size: 2rem; /* Optional: größere Schrift */
 }
 
@@ -130,7 +129,7 @@
     flex-wrap: wrap; /* Boxen umbrechen, wenn der Platz nicht ausreicht */
     gap: 20px; /* Abstand zwischen den Boxen */
     justify-content: space-between; /* Gleichmäßige Verteilung der Boxen */
-    padding: 20px;
+    padding: 0px;
 }
 
 .Teammember {
@@ -212,27 +211,25 @@
 
 /* Start Organigramm Styling */
 .Organisation {
-    padding: 5rem;
+    padding: 0rem;
 }
 
 .Organisation h2 {
     text-align: center;
     margin-bottom: 40px; /* Abstand zur Containerbox */
-    color: var(--primary);
+    color: black;
     font-size: 2rem; /* Optional: größere Schrift */
 }
 
 .Orga_Container {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     align-items: flex-start;
 }
 .Orga_Container img {
     object-fit: cover;
     border-radius: 20px;
-    width: 600px;
-    height: 600px;
-    margin: 2rem;
+    width: 100%;
 }
 
 .Orga_Text h4 {
@@ -243,7 +240,7 @@
     font-size: 16px; /* Schriftgröße */
     line-height: 1.63; /* Zeilenhöhe für bessere Lesbarkeit */
     color: #333; /* Textfarbe */
-    margin: 2rem; /* Entfernt Standardabstand des Paragraphen */
+    margin-top: 2rem; /* Entfernt Standardabstand des Paragraphen */
     background-color: var(--UI-light);
     border-radius: 20px;
     padding: 2rem;
@@ -251,26 +248,45 @@
 }
 
 /* Responsive iPad */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .Orga_Container {
-        flex-direction: column; /* Stapele Bild und Text */
+        flex-direction: row-reverse; /* Stapele Bild und Text */
+        gap: 20px;
     }
 
     .Orga_Container img {
-        width: 100%; /* Bild füllt die Breite */
+        width: 50%; /* Bild füllt die Breite */
         height: auto; /* Höhe passt sich an */
+    }
+
+    .Orga_Text{
+        margin-top: 0%;
+        height: auto;
     }
 }
 
-@media (max-width: 1080px) {
+@media (min-width: 1080px) {
     .Orga_Container {
-        flex-direction: column; /* Elemente vertikal anordnen */
+        flex-direction: row-reverse; /* Elemente vertikal anordnen */
         align-items: center; /* Zentriere Inhalte */
+        gap: 20px;
     }
 
     .Orga_Container img {
         width: 100%; /* Bild passt sich der Breite an */
         height: auto; /* Automatische Höhe */
     }
+
+    .Orga_Container img {
+        object-fit: cover;
+        border-radius: 20px;
+        width: 50%;
+    }
+
+    .Orga_Text{
+        margin-top: 0%;
+        height: 700px;
+    }
+
 }
 /* Ende Organigramm Styling */
