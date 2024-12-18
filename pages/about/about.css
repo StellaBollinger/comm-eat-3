@@ -250,13 +250,14 @@
 /* Responsive iPad */
 @media (min-width: 768px) {
     .Orga_Container {
-        flex-direction: row-reverse; /* Stapele Bild und Text */
+        flex-direction: column; 
         gap: 20px;
     }
 
     .Orga_Container img {
-        width: 50%; /* Bild füllt die Breite */
+        width: 100%; /* Bild füllt die Breite */
         height: auto; /* Höhe passt sich an */
+       
     }
 
     .Orga_Text{
@@ -268,7 +269,7 @@
 @media (min-width: 1080px) {
     .Orga_Container {
         flex-direction: row-reverse; /* Elemente vertikal anordnen */
-        align-items: center; /* Zentriere Inhalte */
+        align-items: stretch;  
         gap: 20px;
     }
 
@@ -284,8 +285,7 @@
     }
 
     .Orga_Text{
-        margin-top: 0%;
-        height: 700px;
+        height: auto; 
     }
 
 }
