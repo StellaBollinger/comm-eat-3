@@ -86,7 +86,7 @@ h2 {
     align-items: center;
 }
 .packages .checkbox-2::before {
-    content: "X";
+    content: "x";
     font-size: 14px;
     color: var(--SBB_red);
 }
